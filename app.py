@@ -4,6 +4,10 @@ import random
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
+def home():
+    return jsonify({"studentNo": "200577950"})
+
+@app.route('/webhook', methods=['POST'])
 def webhook():
     quotes = [
         "Believe you can and you're halfway there.",
